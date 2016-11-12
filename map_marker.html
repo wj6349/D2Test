@@ -17,21 +17,16 @@
 
 <script type="text/javascript">
 	// 지도 생성
-	console.log(nhn.api);
-	var nmap = nhn.api.map.Map('nmap', { // nmap 은 지도가 생성될 요소의 id값 입니다 (원하시는 데로 네이밍!)
-		point : nhn.api.map.LatLng(281982, 538758), // 위도, 경도 설정 (이 값을 가운데로 하여 지도 생성)
-		zoom : 11 // 줌 설정
-	});
 	
+var map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+});
 
-	// 마커로 사용할 이미지 정의
-	var marker_icon =  nhn.api.map.Icon('httsp://superkts.com/img/marker_arrive.png', new nhn.api.map.Size(32, 46), new nhn.api.map.Size(16, 46));
-
-	// 마커 정의
-	var marker = nhn.api.map.Marker(marker_icon, {point:new nhn.api.map.LatLng(281982, 538758)});
-
-	// 지도에 마커 추가하기
-	nmap.addOverlay(marker);
+var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.3595704, 127.105399),
+    map: map
+});
 
 </script>
 
