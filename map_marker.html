@@ -17,12 +17,12 @@
 	// 지도 생성
 	
 var map = new naver.maps.Map('map', {
-    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    center: new naver.maps.LatLng(naver.maps.TM128.fromPointToCoord(282882, 540442)),
     zoom: 10
 });
 
 var marker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.3595704, 127.105399),
+    position: new naver.maps.LatLng(naver.maps.TM128.fromPointToCoord(282882, 540442)),
     map: map
 });
 
